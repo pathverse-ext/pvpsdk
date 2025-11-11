@@ -1,0 +1,10 @@
+name: pvpsdk
+description: "A Dart SDK for PVP with dart_eval bindings."
+version: 0.0.1
+homepage: https://github.com/pathverse-ext/pvpsdk
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  dart_eval: ^0.8.2
