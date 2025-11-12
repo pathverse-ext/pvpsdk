@@ -122,9 +122,13 @@ class Lesson {
       'has_completed',
     };
 
-    // Extract extra fields
-    final extra = Map<String, dynamic>.from(json)
-      ..removeWhere((key, value) => knownFields.contains(key));
+    // Extract extra fields (dart_eval doesn't support removeWhere)
+    final extra = <String, dynamic>{};
+    for (final key in json.keys) {
+      if (!knownFields.contains(key)) {
+        extra[key] = json[key];
+      }
+    }
 
     return Lesson(
       id: json['id'] as int,
