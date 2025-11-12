@@ -1,0 +1,12 @@
+name: pvpsdk_binding
+description: "dart_eval bindings for pvpsdk package"
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  dart_eval: ^0.8.2
+  pvpsdk:
+    path: ../pvpsdk

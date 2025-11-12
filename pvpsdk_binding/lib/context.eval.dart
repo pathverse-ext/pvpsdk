@@ -5,7 +5,7 @@
 
 import 'package:dart_eval/dart_eval.dart';
 import 'package:dart_eval/dart_eval_bridge.dart';
-import 'context.dart';
+import 'package:pvpsdk/src/context.dart';
 import 'package:dart_eval/stdlib/core.dart';
 
 /// dart_eval wrapper binding for [PVPContext]

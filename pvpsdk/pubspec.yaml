@@ -5,6 +5,3 @@ homepage: https://github.com/pathverse-ext/pvpsdk
 
 environment:
   sdk: ^3.9.2
-
-dev_dependencies: 
-  dart_eval: ^0.8.2
