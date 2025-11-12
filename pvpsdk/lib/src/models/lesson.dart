@@ -179,7 +179,7 @@ class Lesson {
   }
 
   Map<String, dynamic> toJson() {
-    return {
+    final result = {
       'id': id,
       'name': name,
       'description': description,
@@ -227,7 +227,13 @@ class Lesson {
       'has_card_grouping': hasCardGrouping,
       'group': group,
       'has_completed': hasCompleted,
-      ...extra, // Spread extra fields into the JSON
     };
+
+    // Add extra fields without using spread operator (dart_eval doesn't support it)
+    extra.forEach((key, value) {
+      result[key] = value;
+    });
+
+    return result;
   }
 }
