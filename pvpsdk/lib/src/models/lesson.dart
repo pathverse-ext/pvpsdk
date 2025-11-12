@@ -229,10 +229,10 @@ class Lesson {
       'has_completed': hasCompleted,
     };
 
-    // Add extra fields without using spread operator (dart_eval doesn't support it)
-    extra.forEach((key, value) {
-      result[key] = value;
-    });
+    // Add extra fields using for-in loop (dart_eval doesn't support spread or forEach)
+    for (final key in extra.keys) {
+      result[key] = extra[key];
+    }
 
     return result;
   }
